@@ -11,8 +11,8 @@ function echoDemo(){
 
 //require("./httpServer.js").demo();
 
-//require("./httpClient.js").demo();
+require("./httpClient.js").demo();
 
 //require("./socketServer.js").demo();
 
-require("./socketClient.js").demo();
+//require("./socketClient.js").demo();

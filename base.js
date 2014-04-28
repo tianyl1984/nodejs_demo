@@ -5,24 +5,24 @@ exports.demo = function(){
 }
 
 function showArgs(){
-	//processÊÇÈ«¾Ö±äÁ¿£¬process.argv¿ÉÒÔ»ñÈ¡ÃüÁîĞĞ´«µİ¹ıÀ´µÄ²ÎÊı
+	//processæ˜¯å…¨å±€å˜é‡ï¼Œprocess.argvå¯ä»¥è·å–å‘½ä»¤è¡Œä¼ é€’è¿‡æ¥çš„å‚æ•°
 	console.log(process.argv[0] + " " + process.argv[1] + " " + process.argv[2]);	
 }
 
 function buffer(){
-	var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);//´´½¨¶ş½øÖÆÊı¾İ
+	var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);//åˆ›å»ºäºŒè¿›åˆ¶æ•°æ®
 	console.log("bin:" + bin.toString("utf-8"));	
 	
 	var bin3 = new Buffer(bin.length);
-	bin.copy(bin3);//¸´ÖÆĞÂµÄbuffer£¬ĞŞ¸Ä²»ÊÜÓ°Ïì
+	bin.copy(bin3);//å¤åˆ¶æ–°çš„bufferï¼Œä¿®æ”¹ä¸å—å½±å“
 	
-	var bin2 = bin.slice(1);//·µ»ØºÍbinÖ¸ÏòÍ¬Ò»µØÖ·µÄbuffer
-	bin2[0] = 0x68;//ĞŞ¸Ä»áÓ°Ïìbin
+	var bin2 = bin.slice(1);//è¿”å›å’ŒbinæŒ‡å‘åŒä¸€åœ°å€çš„buffer
+	bin2[0] = 0x68;//ä¿®æ”¹ä¼šå½±å“bin
 	console.log("bin2" + bin2.toString("utf-8"));
 	console.log("bin:" + bin.toString("utf-8"));
 
 	console.log(bin3.toString("utf-8"));
 	
-	var bin4 = new Buffer("Hello bin4","utf-8");//Ê¹ÓÃ×Ö·û´®´´½¨
+	var bin4 = new Buffer("Hello bin4","utf-8");//ä½¿ç”¨å­—ç¬¦ä¸²åˆ›å»º
 	console.log(bin4.toString("utf-8"));
 }
